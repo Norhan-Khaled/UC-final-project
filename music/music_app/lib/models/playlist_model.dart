@@ -11,26 +11,22 @@ class Playlist {
     Playlist(
       title: "R&B Mix",
       songs: Song.songs,
-      imageUrl:
-          "https://i.pinimg.com/564x/88/47/e0/8847e05ccc2212868a731639a95cec8f.jpg",
+      imageUrl: "assets/playlist_genres/r&b.png",
     ),
     Playlist(
       title: "Indie Mix",
       songs: Song.songs,
-      imageUrl:
-          "https://i.pinimg.com/564x/f6/76/5d/f6765df1cdbe443a9bab8a4020830029.jpg",
+      imageUrl: "assets/playlist_genres/indie.png",
     ),
     Playlist(
       title: "EDM",
       songs: Song.songs,
-      imageUrl:
-          "https://i.pinimg.com/564x/70/8e/a4/708ea4aa8bfdd493c77cd4ba4278685b.jpg",
+      imageUrl: "assets/playlist_genres/edm.png",
     ),
     Playlist(
-      title: "ALternative Rock",
+      title: "Alternative Rock",
       songs: Song.songs,
-      imageUrl:
-          "https://i.pinimg.com/564x/d7/2a/60/d72a6012bd7c0416f1b68c7128c722fa.jpg",
+      imageUrl: "assets/playlist_genres/altrock.png",
     ),
   ];
 }

@@ -7,6 +7,10 @@ Norhan Khaled Khater
 Music Player :sparkles: 
 
 # Idea
+play music
+skip to the next song
+go back to the prev song
+view playlists
 
 
 
@@ -14,6 +18,8 @@ Music Player :sparkles:
 
 
 # Future Work 
-
+fix the playlist screen
+make the playlists images appear (fix it asap)
+be able to play (hear) the song and use the seek bar to skip through the song 
 
 
