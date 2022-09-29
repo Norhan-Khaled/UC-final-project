@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:music_app/screens/home_screen.dart';
 import 'package:music_app/screens/song_screen.dart';
 
+import 'screens/playlist.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(name: "/", page: () => const HomeScreen()),
         GetPage(name: "/song", page: () => const SongScreen()),
-        // GetPage(name: "/playlist", page: () => const PlaylistScreen()),
+        GetPage(name: "/playlist", page: () => const PlaylistScreen()),
       ],
     );
   }

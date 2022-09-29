@@ -20,8 +20,8 @@ class HomeScreen extends StatelessWidget {
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [
-            Colors.deepPurple.shade800.withOpacity(0.8),
-            Colors.deepPurple.shade200.withOpacity(0.8),
+            Color.fromARGB(255, 19, 17, 22).withOpacity(0.8),
+            Color.fromARGB(255, 111, 94, 163).withOpacity(0.8),
           ],
         ),
       ),
@@ -34,40 +34,39 @@ class HomeScreen extends StatelessWidget {
           children: [
             const _DiscoverMusic(),
             _TrendingMusic(songs: songs),
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Column(
-                children: [
-                  const SectionHeader(title: "Playlists"),
-                  ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: 1,
-                    itemBuilder: ((context, index) {
-                      return Container(
-                        child: Row(
-                          children: [
-                            Container(
-                              color: Colors.red,
-                              child: Image(
-                                image: NetworkImage(
-                                    "https://i.pinimg.com/564x/88/47/e0/8847e05ccc2212868a731639a95cec8f.jpg"),
-                                // playlists[index].imageUrl,
-
-                                height: 50,
-                                width: 50,
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ],
-                        ),
-                      );
-                    }),
-                  ),
-                ],
-              ),
-            ),
+            _PlaylistMusic(playlists: playlists),
           ],
         )),
+      ),
+    );
+  }
+}
+
+class _PlaylistMusic extends StatelessWidget {
+  const _PlaylistMusic({
+    Key? key,
+    required this.playlists,
+  }) : super(key: key);
+
+  final List<Playlist> playlists;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Column(
+        children: [
+          const SectionHeader(title: "Playlists"),
+          ListView.builder(
+            shrinkWrap: true,
+            padding: const EdgeInsets.only(top: 20),
+            physics: const NeverScrollableScrollPhysics(),
+            itemCount: playlists.length,
+            itemBuilder: ((context, index) {
+              return PlaylistCard(playlist: playlists[index]);
+            }),
+          ),
+        ],
       ),
     );
   }
@@ -176,7 +175,7 @@ class _CustomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
-      backgroundColor: Colors.deepPurple.shade800,
+      backgroundColor: Color.fromARGB(175, 28, 19, 54),
       unselectedItemColor: Colors.white,
       selectedItemColor: Colors.white,
       showUnselectedLabels: false,
@@ -218,8 +217,8 @@ class _CustomAppBar extends StatelessWidget with PreferredSizeWidget {
         Container(
           margin: const EdgeInsets.only(right: 20),
           child: const CircleAvatar(
-            backgroundImage:
-                NetworkImage("https://pbs.twimg.com/media/E5tXnvKXMAYbl9M.png"),
+            backgroundImage: NetworkImage(
+                "https://i.pinimg.com/736x/83/f3/37/83f33700272850fb8e703abc1a0cbb66.jpg"),
           ),
         ),
       ],

@@ -17,6 +17,16 @@ class Song {
         url: "assets/music/Billie Eilish - NDA (Lyrics).mp3",
         coverUrl: "assets/images/HTE.png"),
     Song(
+        title: "My Future",
+        description: "Billie Eilish",
+        url: "assets/music/Billie Eilish - my future.mp3",
+        coverUrl: "assets/images/mf.png"),
+    Song(
+        title: "The Last Time",
+        description: "Taylor Swift",
+        url: "assets/music/Taylor Swift - The Last Time.mp3",
+        coverUrl: "assets/images/red.png"),
+    Song(
         title: "afterdark",
         description: "Mr. Kitty",
         url: "assets/music/Mr.Kitty - After Dark_160k.mp3",
